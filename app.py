@@ -44,7 +44,7 @@ if file:
         model.fit(X_train, y_train)
         acc = model.score(X_test, y_test)
 
-        fig, ax = plt.subplots(figsize=(20, 8))
+        fig, ax = plt.subplots(figsize=(10, 5))
         plot_tree(model, feature_names=X.columns, class_names=['Reject', 'Accept'], filled=True, ax=ax)
         st.pyplot(fig)
         st.success(f"Model Accuracy: {acc * 100:.2f}%")
